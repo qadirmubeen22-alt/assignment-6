@@ -1,0 +1,192 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+
+  background: linear-gradient(
+    135deg,
+    #6dd5ed,
+    #7f7fd5,
+    #86fde8
+  );
+}
+
+/* Main Card */
+.counter-card {
+  width: 450px;
+  min-height: 520px;
+
+  padding: 35px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 30px;
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Badge */
+.top-badge {
+  display: inline-block;
+
+  padding: 8px 18px;
+  margin-bottom: 15px;
+
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  border-radius: 50px;
+
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+h1 {
+  margin-bottom: 25px;
+
+  color: white;
+  font-size: 34px;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Number */
+.number-box {
+  width: 250px;
+  height: 250px;
+
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #7fffd4,
+    #52e0c4
+  );
+
+  border-radius: 40px;
+
+  box-shadow:
+    inset 0 0 30px rgba(255, 255, 255, 0.3),
+    0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.number-box span {
+  color: #222;
+  font-size: 110px;
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+button {
+  height: 55px;
+
+  border: none;
+  border-radius: 15px;
+
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.plus-btn,
+.minus-btn {
+  width: 75px;
+}
+
+.reset-btn {
+  width: 110px;
+  font-size: 17px;
+}
+
+/* Button Colors */
+.plus-btn {
+  background: linear-gradient(135deg, #00c853, #64dd17);
+  box-shadow: 0 8px 18px rgba(0, 200, 83, 0.3);
+}
+
+.reset-btn {
+  background: linear-gradient(135deg, #ff4081, #ff6d00);
+  box-shadow: 0 8px 18px rgba(255, 64, 129, 0.3);
+}
+
+.minus-btn {
+  background: linear-gradient(135deg, #2979ff, #651fff);
+  box-shadow: 0 8px 18px rgba(41, 121, 255, 0.3);
+}
+
+/* Hover */
+button:hover {
+  transform: translateY(-4px) scale(1.04);
+  filter: brightness(1.08);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Message */
+.message {
+  margin-top: 25px;
+
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .counter-card {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .number-box {
+    width: 210px;
+    height: 210px;
+  }
+
+  .number-box span {
+    font-size: 90px;
+  }
+
+  .buttons {
+    gap: 8px;
+  }
+}
